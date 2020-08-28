@@ -1,0 +1,472 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Methods 1: GIS</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <link href="https://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans" rel="stylesheet" type="text/css">
+
+        <link href="css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="css/base.css" rel="stylesheet" />
+
+        <script src="js/hammer.min.js"></script>
+        <script src="js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Methods 1: GIS</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+            <p>g to view grid</p>
+        </div>
+
+        <div class="slide">
+            <h1>Methods 1: GIS</h1>
+        </div>
+
+        <div class="slide">
+            <h2>intros</h2>
+        </div>
+
+        <div class="slide">
+            <h2>maps that I've made</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/llnyc.png);">
+            <a class="source" href="http://livinglotsnyc.org/">living lots nyc</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/curb-your-litter.png);">
+            <a class="source">curb your litter</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>goals for today</h2>
+        </div>
+
+        <div class="slide">
+            <h2>goals for today</h2>
+            <ul style="list-style: disc;">
+                <li>define GIS</li>
+                <li>get familiar with the QGIS interface</li>
+                <li>start using QGIS</li>
+                <li>start finding data</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>this is a brief introduction</h2>
+        </div>
+
+        <div class="slide">
+            <h2>GIS</h2>
+        </div>
+
+        <div class="slide">
+            <h2>GIS</h2>
+            <p>
+                "Any system for capturing, storing, checking, and displaying data related to positions on the Earth's surface"
+            </p>
+            <a class="source" href="https://www.nationalgeographic.org/encyclopedia/geographic-information-system-gis/">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>GIS</h2>
+            <p>
+                "In a GIS, you connect <strong>data</strong> with <strong>geography</strong>."
+            </p>
+            <a class="source" href="https://gisgeography.com/what-gis-geographic-information-systems/">gisgeography.com</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/esri.gif);">
+            <a class="source" href="http://www.esri.com/">ESRI</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis.png); background-size: 20%;">
+            <a class="source" href="http://qgis.org/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/streeteasy.jpg);">
+            <a class="source" href="https://streeteasy.com/blog/streeteasy-debuts-latest-ad-campaign/">streeteasy</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/rethinktheblock1.jpg);">
+            <a class="source" href="http://www.tahlandproductions.com/Files/methods/rethinktheblock/Final.html">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/rethinktheblock2.jpg);">
+            <a class="source" href="http://www.tahlandproductions.com/Files/methods/rethinktheblock/Final.html">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/rethinktheblock3.png);">
+            <a class="source" href="http://www.tahlandproductions.com/Files/methods/rethinktheblock/Final.html">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/la-parks.png);">
+            <a class="source" href="http://lacountyparkneeds.org/final-report/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/scp_les.png);">
+            <a class="source" href="http://www.notbored.org/the-scp.html">Surveillance Camera Players</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/isee.png);">
+            <a class="source" href="http://66.93.183.118:8080/isee/s1?zm=0&id=11885">iSee</a>
+        </div>
+
+        <div class="slide">
+            <h2>short QGIS demonstration</h2>
+        </div>
+
+        <div class="slide">
+            <h2>short QGIS demonstration</h2>
+            <ul style="list-style: disc; padding-left: 50px;">
+                <li>watch as I do a common GIS task</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>short QGIS demonstration</h2>
+            <ul style="list-style: disc; padding-left: 50px;">
+                <li>watch as I do a common GIS task</li>
+                <li>don't worry about <strong>how</strong> things are done yet</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>short QGIS demonstration</h2>
+            <ul style="list-style: disc; padding-left: 50px;">
+                <li>watch as I do a common GIS task</li>
+                <li>don't worry about <strong>how</strong> things are done yet</li>
+                <li>as I do, write down <strong>at least three actions</strong> I perform with the GIS</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>short QGIS demonstration</h2>
+            <ul style="list-style: disc; padding-left: 50px;">
+                <li>watch as I do a common GIS task</li>
+                <li>don't worry about <strong>how</strong> things are done yet</li>
+                <li>as I do, write down <strong>at least three actions</strong> I perform with the GIS</li>
+                <li>you'll share some of these afterward</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>what did we notice?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>a GIS will let you:</h2>
+            <ul style="list-style: disc; padding-left: 50px;">
+                <li>visualize map data</li>
+                <li>create and edit map data</li>
+                <li>overlay map data</li>
+                <li>analyze map data</li>
+            </ul>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide" style="background-image: url(img/qgis.png); background-size: 20%;">
+            <a class="source" href="http://qgis.org/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis.png); background-size: 20%;">
+            <h2>Why QGIS?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis.png); background-size: 20%;">
+            <h2>QGIS is open source</h2>
+        </div>
+
+        <div class="slide">
+            <h2>open source:</h2>
+            <ul style="list-style: disc;">
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>open source:</h2>
+            <ul style="list-style: disc;">
+                <li>free!</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>open source:</h2>
+            <ul style="list-style: disc;">
+                <li>free!</li>
+                <li>you can have an impact on it</li>
+            </ul>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-github.png);">
+            <a class="source" href="https://github.com/qgis/QGIS">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-sponsorships.png);">
+            <a class="source" href="http://www.qgis.org/en/_downloads/PublicQGISfinancialreport2014.pdf">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>QGIS depends on other open source packages</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gdal.png);">
+            <a class="source" href="http://www.gdal.org/">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>QGIS doesn't have an official tech support group</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gis-stack-exchange.png);">
+            <a class="source" href="https://gis.stackexchange.com/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gis-stackexchange-points.png);">
+            <a class="source" href="https://gis.stackexchange.com/questions/299356/creating-groups-of-points-based-on-proximity-in-qgis">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>installing QGIS</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-versions.png);">
+            <a class="source" href="https://qgis.org/en/site/forusers/download.html">source</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide" style="background-image: url(img/layers.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/layers.png);">
+            <h2>GISs layer data</h2>
+        </div>
+
+        <div class="slide">
+            <h2>there are two main types of GIS data</h2>
+        </div>
+
+        <div class="slide">
+            <h2><em>vector</em> and <em>raster</em></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gis_vector_raster.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/gis_raster.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/gis_raster.jpg);">
+            <h2>raster</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gis_vector.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/gis_vector.jpg);">
+            <h2>vector</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/vector-shapes.jpg);">
+            <a class="source" href="http://2012books.lardbucket.org/books/geographic-information-system-basics/s08-02-vector-data-models.html">source</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide" style="background-image: url(img/qgis-layout.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-map-canvas.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-map-canvas.png);">
+            <h2>map canvas</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-layers-panel.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-layers-panel.png);">
+            <h2>layers panel</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-other-panels.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-other-panels.png);">
+            <h2>other panels</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-toolbars.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-toolbars.png);">
+            <h2>toolbars</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-status-bar.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-status-bar.png);">
+            <h2>status bar</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-search-bar.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-search-bar.png);">
+            <h2>search bar</h2>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html">exercise 1</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-styling.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-styling.png);">
+            <h2>style layers in the Layer Styling panel</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/print-layout.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/print-layout.png);">
+            <h2>Print Layouts</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-project-save.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html">exercise 2</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>finding data</h2>
+        </div>
+
+        <div class="slide">
+            <h2>generally a little more difficult than a simple Google search</h2>
+        </div>
+
+        <div class="slide">
+            <h2>keep an eye out for:</h2>
+            <ul style="list-style: disc;">
+                <li>shapefiles (.shp)</li>
+                <li>GeoJSONs (.geojson)</li>
+                <li>KMLs (.kml or .kmz)</li>
+                <li>CSVs</li>
+                <li>...or anything else you can get QGIS to open</li>
+            </ul>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data.png);">
+            <a class="source" href="https://opendata.cityofnewyork.us/">NYC OpenData</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/google-dataset-search.png);">
+            <a class="source" href="https://toolbox.google.com/datasetsearch">Google Dataset Search</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/american-fact-finder.png);">
+            <a class="source" href="https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml">American FactFinder</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/bytes-of-the-big-apple.png);">
+            <a class="source" href="https://www1.nyc.gov/site/planning/data-maps/open-data.page">Bytes of the Big Apple</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data.png);">
+            <h2>some NYC OpenData tips:</h2>
+            <a class="source" href="https://opendata.cityofnewyork.us/">NYC OpenData</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-maps.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-maps.png);">
+            <h2>1: when searching, you can filter to just show maps</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-huge.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-huge.png);">
+            <h2>2: some datasets are too large to download...</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-filters.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-filters.png);">
+            <h2>...use filters to make them more manageable</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-metadata-0.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-metadata-0.png);">
+            <h2>3: some data uses codes...</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-metadata-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-metadata-2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-metadata-2.png);">
+            <h2>...with some digging you can often find what they mean</h2>
+        </div>
+
+        <div class="slide">
+            <h2>for tomorrow</h2>
+        </div>
+
+        <div class="slide">
+            <h2>for tomorrow</h2>
+            <ul style="list-style: disc;">
+                <li>look for data related to your group's focus</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>for tomorrow</h2>
+            <ul style="list-style: disc;">
+                <li>look for data related to your group's focus</li>
+                <li>try to open it in QGIS</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>for tomorrow</h2>
+            <ul style="list-style: disc;">
+                <li>look for data related to your group's focus</li>
+                <li>try to open it in QGIS</li>
+                <li>keep track of what you find (or don't find)</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>for tomorrow</h2>
+            <ul style="list-style: disc;">
+                <li>look for data related to your group's focus</li>
+                <li>try to open it in QGIS</li>
+                <li>keep track of what you find (or don't find)</li>
+                <li>don't spend too long on this (30 minutes)</li>
+            </ul>
+        </div>
+
+    </body>
+</html>

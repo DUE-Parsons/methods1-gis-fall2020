@@ -1,0 +1,477 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Methods 1: GIS</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <link href="https://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans" rel="stylesheet" type="text/css">
+
+        <link href="css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="css/base.css" rel="stylesheet" />
+
+        <script src="js/hammer.min.js"></script>
+        <script src="js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Methods 1: GIS</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+            <p>g to view grid</p>
+        </div>
+
+        <div class="slide">
+            <h1>Methods 1: GIS</h1>
+        </div>
+
+        <div class="slide">
+            <h2>welcome back!</h2>
+        </div>
+
+        <div class="slide">
+            <h2>what data did you find?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>goals for today</h2>
+        </div>
+
+        <div class="slide">
+            <h2>goals for today</h2>
+            <ul style="list-style: disc;">
+                <li>load more data</li>
+                <li>use projections</li>
+                <li>learn more about styles</li>
+                <li>filter data</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>vector data formats</h2>
+        </div>
+
+        <div class="slide">
+            <h2>QGIS automatically reads many vector formats:</h2>
+        </div>
+
+        <div class="slide">
+            <h2>QGIS automatically reads many vector formats:</h2>
+            <ul style="list-style: disc;">
+                <li>shapefiles (.shp)</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>QGIS automatically reads many vector formats:</h2>
+            <ul style="list-style: disc;">
+                <li>shapefiles (.shp)</li>
+                <li>GeoJSONs (.geojson)</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>QGIS automatically reads many vector formats:</h2>
+            <ul style="list-style: disc;">
+                <li>shapefiles (.shp)</li>
+                <li>GeoJSONs (.geojson)</li>
+                <li>KML (.kml / .kmz)</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>QGIS automatically reads many vector formats:</h2>
+            <ul style="list-style: disc;">
+                <li>shapefiles (.shp)</li>
+                <li>GeoJSONs (.geojson)</li>
+                <li>KML (.kml / .kmz)</li>
+                <li>OSM (.osm)</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>shapefiles</h2>
+        </div>
+
+        <div class="slide">
+            <h2>shapefiles were initially created by ESRI</h2>
+        </div>
+
+        <div class="slide">
+            <h2>1. column names limited to ten characters</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/shapefile-column-names.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/shapefile-column-names.png);">
+            <h2>how do you pronounce "C_DIG2DESC"?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>2. multiple files make up a shapefile</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/shapefile-files.png);">
+        </div>
+
+        <div class="slide">
+            <h2>3. one geometry type per shapefile</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/shapefile-one-geometry-per-file.png);">
+        </div>
+
+        <div class="slide">
+            <h2>despite these issues, shapefiles are still by far the most common spatial data format</h2>
+        </div>
+
+        <div class="slide">
+            <h2>CSVs are handy for point data</h2>
+        </div>
+
+        <div class="slide">
+            <h2>these are simply text files</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/csv.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/csv.png);">
+            <h2><em>c</em>omma <em>s</em>eparated <em>v</em>alues</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-csv-0.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-csv-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/latlng_coordinates.jpg);">
+        </div>
+
+        <div class="slide">
+            <h2>what are latitude and longitude?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/battleship_piece.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/battleship_pegs.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/battleship_board.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/latlng2.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/meridians.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/latlng_coordinates.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-csv-2.png);">
+        </div>
+
+        <div class="slide">
+            <h2>projections and coordinate reference systems (CRS)</h2>
+        </div>
+
+        <div class="slide">
+            <h2>we'll use <em>projection</em> and <em>CRS</em> interchangeably</h2>
+        </div>
+
+        <div class="slide">
+            <h2><em>projection</em> and <em>CRS</em></h2>
+            <p>how you determine where coordinates actually are on the earth</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-csv-2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-csv-2.png);">
+            <h2>EPSG:4326</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-csv-2.png);">
+            <h2>EPSG:4326 is essentially latitude and longitude</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-csv-2.png);">
+            <h2>if your data is in latitude and longitude, use EPSG:4326</h2>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass-3.html">exercise 3</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>let's talk about projections a little more</h2>
+        </div>
+
+        <div class="slide">
+            <h2>every projection distorts some aspect of the geography</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/projections-interactive.png);">
+            <a class="source" href="http://bl.ocks.org/vlandham/raw/9216751/">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>you have to pick the one(s) that make the most sense for what you're doing</h2>
+        </div>
+
+        <div class="slide">
+            <h2>usually you will pick a projection for your project to make your data look good</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/us-wgs84.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/us-albers.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-wgs84.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-2263.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/project-settings.png);"></div>
+
+        <div class="slide" style="background-image: url(img/projection-search-qgis.png);"></div>
+
+        <div class="slide" style="background-image: url(img/projection-search-qgis.png);">
+            <h2>to do this, change your project's projection</h2>
+        </div>
+
+        <div class="slide">
+            <h2>not sure which projection to use?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/projection-search-qgis.png);">
+            <h2>search in qgis</h2>
+        </div>
+
+        <div class="slide">
+            <h2>look at the projections used by governments in the area you're mapping</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/state_plane.jpg);">
+            <a class="source" href="http://gis.tulaliptribes-nsn.gov/Home/FrequentlyAskedQuestions.aspx">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/epsg_2263.png);">
+            <a class="source" href="http://spatialreference.org/ref/epsg/2263/">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/epsg_2263.png);">
+            <h2>best for New York area, many city datasets use this</h2>
+            <a class="source" href="http://spatialreference.org/ref/epsg/2263/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/epsg_2263.png);">
+            <h2>remember <em>4326</em> and <em>2263</em> in New York and you're set</h2>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass-4.html">exercise 4</a></h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>categorized styles</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/wood_fences.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/wood_fences_legend.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/land_cover.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-categorized.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-categorized-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-categorized-1.png);">
+            <h2>column to categorize on</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-categorized-2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-categorized-2.png);">
+            <h2>change all categories' styles</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-categorized-5.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-categorized-5.png);">
+            <h2>double-click to change one category's style</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-categorized-3.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-categorized-3.png);">
+            <h2>turn category on or off</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-categorized-4.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-categorized-4.png);">
+            <h2>double-click to change how the category appears in the legend</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-categorized-map.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass-5.html">exercise 5</a></h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>selecting features</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/attributes.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/selection-tools.png); background-size: 20%;">
+        </div>
+
+        <div class="slide" style="background-image: url(img/selection-tools.png); background-size: 20%;">
+            <h2>selection tools</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/selection-draw.png); background-size: 40%;">
+        </div>
+
+        <div class="slide" style="background-image: url(img/selection-expression.png); background-size: 40%;">
+        </div>
+
+        <div class="slide" style="background-image: url(img/select-by-expression.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/select-by-expression.png);">
+            <h2>write an expression on the left</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/select-by-expression-field.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/select-by-expression-field.png);">
+            <h2>field name in quotes</h2>
+            <pre style="background-color: rgba(255, 255, 255, 0.8);"><code>"availableB"</code></pre>
+        </div>
+
+        <div class="slide" style="background-image: url(img/select-by-expression-field.png);">
+            <h2>use typical comparison operators with numbers</h2>
+            <pre style="background-color: rgba(255, 255, 255, 0.8);"><code>"availableB" &lt; 10</code></pre>
+        </div>
+
+        <div class="slide" style="background-image: url(img/expression-operators.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/select-by-expression-field.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/select-by-expression-field-2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/select-by-expression-field-2.png);">
+            <h2>when comparing text, always put the text in single quotes</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/select-by-expression-field-2.png);">
+            <h2>when comparing text, always put the text in single quotes</h2>
+            <pre style="background-color: rgba(255, 255, 255, 0.8);"><code>"stationNam" = 'Willoughby Ave &amp; Hall St'</code></pre>
+        </div>
+
+        <div class="slide" style="background-image: url(img/expressions-ilike.png);">
+        </div>
+
+        <div class="slide">
+            <h2>selecting data and exporting as a new shapefile is one way to isolate data</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/export-0.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/export-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/export-1.png);">
+            <h2>keep your file names descriptive</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/export-2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/export-2.png);">
+            <h2><em>always</em> click this button to select a destination</h2>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass-6.html" target="_blank">exercise 6</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/designed_maps_1.jpg);">
+            <a class="source" href="http://esripress.esri.com/display/index.cfm?fuseaction=display&websiteID=132&moduleID=0">Designed Maps</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/designed_maps_1_legend.jpg);">
+            <a class="source" href="http://esripress.esri.com/display/index.cfm?fuseaction=display&websiteID=132&moduleID=0">Designed Maps</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/quantitative-points.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass-7.html">exercise 7</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>what next?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>we're only scraping the surface of what QGIS can do</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/youtube.png);">
+            <h2>I've made a number of QGIS videos available on YouTube</h2>
+            <a class="source" href="https://www.youtube.com/channel/UCsmBq4ziqRgBZSJK8sGF0Fg">my channel on YouTube</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-tutorials.png);">
+            <h2>this QGIS tutorials site is good</h2>
+            <a class="source" href="https://www.qgistutorials.com/en/">qgistutorials.com</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/discover-qgis.png);">
+            <a class="source" href="https://locatepress.com/dq3">Locate Press</a>
+        </div>
+
+        <div class="slide">
+            <h2>I'm also available by email</h2>
+        </div>
+
+    </body>
+</html>
