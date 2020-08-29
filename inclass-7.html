@@ -18,11 +18,15 @@
             </section>
 
             <section>
-                <h2>7: Quantitative marker styles</h2>
+                <h2>7: Counting points in polygons</h2>
                 <ol>
-                    <li>Open the <strong>NYPD Motor Vehicle Collisions</strong> CSV in QGIS if it's not already open.</li>
-                    <li>Style the points using a <strong>Graduated</strong> style using the <strong>NUMBER OF PERSONS INJURED</strong> column.</li>
-                    <li>Experiment with styling by colors and size, try other classification modes.</li>
+                    <li>Open the <strong>Council District Boundaries</strong> shapefile in QGIS.</li>
+                    <li>Open the <strong>NYPD Motor Vehicle Collisions</strong> file in QGIS.</li>
+                    <li>In the search bar in the bottom left of QGIS, search for "count points in polygon". Double-click the matching option under <strong>Processing Algorithms</strong>.</li>
+                    <li>Ensure the council districts are selected for <strong>Polygons</strong>, collisions are selected for <strong>Points</strong>.</li>
+                    <li>Click <strong>Run</strong>. This will take a minute or so.</li>
+                    <li>Once the count is complete, click <strong>Close</strong> to close the dialog.</li>
+                    <li>Style the new layer (likely named <strong>Count</strong>) with a graduated style using <strong>NUMPOINTS</strong> as the column.</li>
                 </ol>
             </section>
 
